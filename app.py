@@ -11,7 +11,7 @@ openai.api_key = os.getenv('OPENAI_API_KEY')
 def grammar_and_style_check(text):
     try:
         response = openai.Completion.create(
-            engine="text-davinci-003",  # Choose the appropriate engine here
+            engine="gpt-3.5-turbo-instruct",  # Choose the appropriate engine here
             prompt="Please correct the grammar and improve the style of the following text:\n\n" + text,
             temperature=0.0,
             max_tokens=300,
